@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 
 const processSteps = [
@@ -56,15 +55,20 @@ export default function Process() {
               key={step.n}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.02, y: -8 }}
+              whileTap={{ scale: 0.98 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative p-8 rounded-[32px] border border-background/10 hover:border-primary/50 transition-all duration-300 group text-left flex flex-col justify-between cursor-default bg-background/5 backdrop-blur-sm"
+              className="relative p-8 rounded-[32px] border border-background/10 text-left flex flex-col justify-between cursor-pointer bg-background/5 backdrop-blur-sm hover:border-primary/50"
             >
               <div>
                 {/* Large Process Step Number */}
-                <div className="font-display text-6xl lg:text-7xl font-black text-primary/20 group-hover:text-primary transition-colors duration-300 mb-6">
+                <motion.div
+                  whileHover={{ color: "rgba(147, 51, 234, 1)" }}
+                  className="font-display text-6xl lg:text-7xl font-black text-primary/20 mb-6"
+                >
                   {step.n}
-                </div>
+                </motion.div>
                 
                 {/* Step Title */}
                 <h3 className="font-display text-2xl font-bold mb-3 text-background">
