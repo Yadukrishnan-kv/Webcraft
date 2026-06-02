@@ -106,21 +106,7 @@ const projects = [
       </svg>
     )
   },
-  {
-    title: "Spice Garden",
-    tag: "Taste the Tradition",
-    year: "2025",
-    url: "https://webbiko.in/demo/spice-garden.html",
-    bgClass: "from-orange-950 via-red-900 to-amber-950",
-    visual: (
-      <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
-        <rect x="5" y="5" width="90" height="90" rx="6" stroke="currentColor" strokeWidth="1.5" />
-        <line x1="5" y1="20" x2="95" y2="20" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M50 30 C30 45, 30 65, 50 80 C70 65, 70 45, 50 30 Z" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="50" cy="55" r="6" stroke="currentColor" strokeWidth="1.5" />
-      </svg>
-    )
-  }
+ 
 ]
 
 export default function Work() {
@@ -139,12 +125,10 @@ export default function Work() {
           <div>
             <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Selected Work</span>
             <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground">
-              Demo projects.
+            Real-World Projects
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md text-base leading-relaxed">
-            A glimpse of the brands and products we've shipped — built with the same craft we'd put into our own.
-          </p>
+          
         </motion.div>
 
         {/* Portfolio Cards Grid */}

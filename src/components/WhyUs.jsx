@@ -5,35 +5,35 @@ import { Zap, Palette, Gauge, Shield, ChartLine, HeartHandshake } from 'lucide-r
 const reasons = [
   {
     icon: Zap,
-    title: "Lightning Fast",
-    desc: "Every site we ship is optimised for Core Web Vitals — under 1s load times on real-world devices."
-  },
-  {
-    icon: Palette,
-    title: "Pixel-Perfect Design",
-    desc: "Crafted layouts, considered typography and motion that feels premium without being heavy."
+    title: "Fast Delivery",
+    desc: "We move quickly from idea to launch without unnecessary delays or complexity.",
   },
   {
     icon: Gauge,
-    title: "SEO Built-In",
-    desc: "Semantic HTML, structured data, sitemaps, alt text — search engines love what we ship."
+    title: "High Performance",
+    desc: "Every product is built for speed, smooth experience, and reliable real-world usage.",
+  },
+  {
+    icon: Palette,
+    title: "Clean Design",
+    desc: "Simple, modern interfaces focused on clarity, usability, and strong first impressions.",
   },
   {
     icon: Shield,
-    title: "Secure & Reliable",
-    desc: "Hardened deployments, HTTPS by default, regular updates and proactive monitoring."
+    title: "Reliable Quality",
+    desc: "Stable, well-structured builds that work consistently across devices and use cases.",
   },
   {
     icon: ChartLine,
-    title: "Built to Convert",
-    desc: "We don't just make sites pretty — we engineer them to turn visitors into customers."
+    title: "Growth Focused",
+    desc: "Built to support business goals like engagement, conversions, and long-term growth.",
   },
   {
     icon: HeartHandshake,
-    title: "Long-Term Partner",
-    desc: "We don't disappear after launch. Maintenance, iteration and growth — together."
-  }
-]
+    title: "Easy Collaboration",
+    desc: "Clear communication, smooth process, and support from start to delivery.",
+  },
+];
 
 export default function WhyUs() {
   return (
@@ -50,8 +50,8 @@ export default function WhyUs() {
         >
           <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Why Webbiko</span>
           <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-balance text-foreground">
-            Six reasons brands keep{" "}
-            <span className="gradient-text">choosing us.</span>
+           What sets {" "}
+            <span className="gradient-text">us apart.</span>
           </h2>
         </motion.div>
 

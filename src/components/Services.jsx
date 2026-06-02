@@ -1,52 +1,75 @@
-import React from 'react'
-import { motion as m } from 'framer-motion'
-import { PanelsTopLeft, Database, CodeXml, ShoppingBag, Smartphone, Gauge } from 'lucide-react'
+import React from "react";
+import { motion as m } from "framer-motion";
+import {
+  PanelsTopLeft,
+  Database,
+  CodeXml,
+  ShoppingBag,
+  Smartphone,
+  Gauge,
+} from "lucide-react";
 
 const mainServices = [
   {
     icon: PanelsTopLeft,
     title: "Static Websites",
-    desc: "Lightning-fast marketing sites, portfolios and landing pages. Hand-crafted, pixel-perfect, deployed on a global edge network for sub-second loads everywhere.",
-    bullets: ["Pre-rendered HTML", "99 Lighthouse score", "Edge-hosted CDN"]
+    desc: "Fast, secure, and beautifully crafted static websites designed to showcase your brand, build credibility, and deliver an exceptional user experience.",
+    bullets: ["Lightning-Fast Loading", "Performance-First Architecture", "Global Edge Network"],
   },
   {
     icon: Database,
     title: "Dynamic Web Apps",
-    desc: "Full-stack web platforms with real-time data, auth, dashboards and APIs. From booking systems to SaaS — engineered to scale with your business.",
-    bullets: ["Auth & user management", "Realtime database", "Admin dashboards"]
+    desc: "Scalable full-stack platforms with real-time systems, secure auth, dashboards, and APIs — from booking systems to SaaS products. Built to grow with your business.",
+    bullets: [
+      "Secure authentication & user management",
+      "Real-time data processing",
+      "Admin dashboards for full control",
+    ],
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App Development",
+    desc: "High-performance mobile applications built for seamless user experiences, strong performance, and scalable architecture across iOS and Android.",
+    bullets: [
+      "Cross-platform development",
+      "API & backend integration",
+      "Smooth native-like performance",
+    ],
   },
   {
     icon: CodeXml,
     title: "Custom Solutions",
-    desc: "Bespoke builds for unique problems. Headless CMS, integrations, automations, and tailored workflows that fit exactly the way your team works.",
-    bullets: ["Headless CMS", "Third-party integrations", "Automation flows"]
-  }
-]
+    desc: "We build custom web systems that adapt to your business — not the other way around. Scalable integrations, headless architectures, and automation that streamline operations.",
+ bullets: ["Headless CMS architecture", "Automated workflows", "API integrations"],  },
+];
 
 const subServices = [
   {
     icon: ShoppingBag,
     title: "E-Commerce",
-    desc: "Storefronts that sell — fast checkout, smart product pages."
+    desc: "Online stores built for speed, simplicity, and higher conversions.",
   },
   {
     icon: Smartphone,
     title: "Responsive Design",
-    desc: "Flawless experiences on every screen, from watch to widescreen."
+    desc: "Seamless layouts that adapt perfectly to any device.",
   },
   {
-    icon: Gauge,
-    title: "SEO Optimisation",
-    desc: "Technical SEO baked in — schema, sitemaps, performance."
-  }
-]
+  icon: Gauge,
+  title: "Performance Optimization",
+  desc: "Faster load times, optimized queries, and improved application efficiency.",
+}
+];
 
 export default function Services() {
   return (
     <section id="services" className="py-24 lg:py-40 relative bg-background">
       {/* Decorative Blur Background Blob */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
-      
+      <div
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"
+        aria-hidden="true"
+      />
+
       <div className="container mx-auto max-w-7xl px-6">
         {/* Header Block */}
         <m.div
@@ -56,13 +79,17 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="max-w-3xl mb-20 text-left"
         >
-          <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Services</span>
+          <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">
+            Services
+          </span>
           <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-balance text-foreground">
             Everything your brand needs{" "}
             <span className="gradient-text">on the web.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            From a single landing page to complex web platforms — we design, build, ship and maintain. One studio, one accountable team, end-to-end.
+            From high-converting landing pages to scalable web platforms, we
+            help businesses attract customers, build trust, and grow online with
+            confidence.{" "}
           </p>
         </m.div>
 
@@ -82,7 +109,7 @@ export default function Services() {
                 <div className="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                   <service.icon className="w-7 h-7" />
                 </div>
-                
+
                 {/* Text titles */}
                 <h3 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
                   {service.title}
@@ -94,7 +121,10 @@ export default function Services() {
                 {/* Bullets lists */}
                 <ul className="grid sm:grid-cols-3 gap-4 border-t border-border/40 pt-6">
                   {service.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-center gap-3 text-sm font-semibold text-foreground">
+                    <li
+                      key={bullet}
+                      className="flex items-center gap-3 text-sm font-semibold text-foreground"
+                    >
                       <span className="w-2 h-2 rounded-full bg-primary" />
                       {bullet}
                     </li>
@@ -132,5 +162,5 @@ export default function Services() {
         </div>
       </div>
     </section>
-  )
+  );
 }

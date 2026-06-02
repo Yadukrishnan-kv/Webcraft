@@ -4,25 +4,25 @@ import { motion } from 'framer-motion'
 const processSteps = [
   {
     n: "01",
-    title: "Discovery",
-    desc: "We dig into your brand, audience and goals. Workshops, audits, competitive teardown — so we build the right thing."
+    title: "Research",
+    desc: "We analyze your market, users, and competitors to identify the best approach for your product."
   },
   {
     n: "02",
-    title: "Design",
-    desc: "Wireframes evolve into high-fidelity, interactive prototypes. Type, color, motion — every detail intentional."
+    title: "Plan",
+    desc: "We structure the product flow, features, and architecture for a scalable solution."
   },
   {
     n: "03",
     title: "Develop",
-    desc: "Clean, performant code. Component-driven, accessible, SEO-ready. Daily previews — never a black box."
+    desc: "We design and develop fast, scalable, and modern full-stack applications."
   },
   {
     n: "04",
-    title: "Deploy",
-    desc: "Edge-deployed with monitoring, analytics and a complete handover. We stick around for the long run."
+    title: "Launch",
+    desc: "We deploy, optimize, and support your product for real-world performance."
   }
-]
+];
 
 export default function Process() {
   return (
@@ -44,8 +44,8 @@ export default function Process() {
         >
           <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Process</span>
           <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-balance text-background">
-            A clear path from{" "}
-            <span className="text-primary">idea to launch.</span>
+           From idea to{" "}
+            <span className="text-primary">real-world impact.</span>
           </h2>
         </motion.div>
 
