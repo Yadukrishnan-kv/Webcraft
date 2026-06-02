@@ -59,24 +59,21 @@ export default function Process() {
               whileTap={{ scale: 0.98 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative p-8 rounded-[32px] border border-background/10 text-left flex flex-col justify-between cursor-pointer bg-background/5 backdrop-blur-sm hover:border-primary/50"
+              className="group relative p-8 rounded-[32px] border border-white/10 text-left flex flex-col justify-between cursor-pointer bg-surface shadow-soft backdrop-blur-sm hover:border-primary/50"
             >
               <div>
                 {/* Large Process Step Number */}
-                <motion.div
-                  whileHover={{ color: "rgba(147, 51, 234, 1)" }}
-                  className="font-display text-6xl lg:text-7xl font-black text-primary/20 mb-6"
-                >
+                <div className="font-display text-6xl lg:text-7xl font-black text-violet-400 mb-6">
                   {step.n}
-                </motion.div>
+                </div>
                 
                 {/* Step Title */}
-                <h3 className="font-display text-2xl font-bold mb-3 text-background">
+                <h3 className="font-display text-2xl font-bold mb-3 text-white">
                   {step.title}
                 </h3>
                 
                 {/* Step Description */}
-                <p className="text-background/60 leading-relaxed text-sm sm:text-base">
+                <p className="text-white/70 leading-relaxed text-sm sm:text-base">
                   {step.desc}
                 </p>
               </div>

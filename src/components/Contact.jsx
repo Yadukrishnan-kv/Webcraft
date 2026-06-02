@@ -123,8 +123,8 @@ export default function Contact() {
             <div className="mt-12 space-y-6">
               
               {/* Phone item */}
-              <a href="tel:+919745706208" className="flex items-center gap-4 group">
-                <span className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center text-background group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+              <a href="tel:+919745706208" className="flex items-center gap-4 group active:scale-95 transition-transform duration-200">
+                <span className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center text-background group-hover:bg-primary group-hover:text-primary-foreground active:bg-primary active:text-primary-foreground transition-colors duration-300">
                   <Phone className="w-5 h-5" />
                 </span>
                 <span>
@@ -134,8 +134,8 @@ export default function Contact() {
               </a>
 
               {/* Email item */}
-              <a href="mailto:yadhumanoj12@gmail.com" className="flex items-center gap-4 group">
-                <span className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center text-background group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+              <a href="mailto:yadhumanoj12@gmail.com" className="flex items-center gap-4 group active:scale-95 transition-transform duration-200">
+                <span className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center text-background group-hover:bg-primary group-hover:text-primary-foreground active:bg-primary active:text-primary-foreground transition-colors duration-300">
                   <Mail className="w-5 h-5" />
                 </span>
                 <span className="break-all">
@@ -164,14 +164,14 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-7 bg-background/5 backdrop-blur-md border border-background/10 rounded-[32px] p-8 lg:p-12 space-y-6 text-left"
+            className="lg:col-span-7 bg-gradient-to-br from-slate-950/95 via-slate-900/90 to-slate-800/85 border border-primary/20 shadow-soft rounded-[32px] p-8 lg:p-12 space-y-6 text-left"
           >
             {/* Input grid */}
             <div className="grid md:grid-cols-2 gap-6">
               
               {/* Name field */}
               <label className="block w-full">
-                <span className="text-sm text-background/70 mb-2 block font-medium">Your name</span>
+                <span className="text-sm text-white/70 mb-2 block font-medium">Your name</span>
                 <input
                   required
                   name="name"
@@ -180,13 +180,13 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Enter Your Name"
                   maxLength={100}
-                  className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors text-base"
+                  className="w-full bg-white border border-white/20 rounded-3xl py-3 px-4 text-slate-950 placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-base"
                 />
               </label>
 
               {/* Email field */}
               <label className="block w-full">
-                <span className="text-sm text-background/70 mb-2 block font-medium">Email</span>
+                <span className="text-sm text-white/70 mb-2 block font-medium">Email</span>
                 <input
                   required
                   name="email"
@@ -195,13 +195,13 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Enter Your Email Address"
                   maxLength={255}
-                  className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors text-base"
+                  className="w-full bg-white border border-white/20 rounded-3xl py-3 px-4 text-slate-950 placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-base"
                 />
               </label>
 
               {/* Phone field */}
               <label className="block w-full">
-                <span className="text-sm text-background/70 mb-2 block font-medium">Phone Number</span>
+                <span className="text-sm text-white/70 mb-2 block font-medium">Phone Number</span>
                 <input
                   required
                   name="phone"
@@ -210,20 +210,20 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Enter Your Phone Number"
                   maxLength={20}
-                  className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors text-base"
+                  className="w-full bg-white border border-white/20 rounded-3xl py-3 px-4 text-slate-950 placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-base"
                 />
               </label>
             </div>
 
             {/* Select Dropdown field */}
             <label className="block w-full">
-              <span className="text-sm text-background/70 mb-2 block font-medium">Project type</span>
+              <span className="text-sm text-white/70 mb-2 block font-medium">Project type</span>
               <div className="relative">
                 <select
                   name="type"
                   value={formData.type}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-background/20 py-3 text-background focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer text-base"
+                  className="w-full bg-white border border-white/20 rounded-3xl py-3 px-4 text-slate-950 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all appearance-none cursor-pointer text-base"
                 >
                   <option className="bg-foreground text-background">Static website</option>
                   <option className="bg-foreground text-background">Dynamic web app</option>
@@ -241,7 +241,7 @@ export default function Contact() {
 
             {/* Textarea field */}
             <label className="block w-full">
-              <span className="text-sm text-background/70 mb-2 block font-medium">Tell us about your project</span>
+              <span className="text-sm text-white/70 mb-2 block font-medium">Tell us about your project</span>
               <textarea
                 required
                 name="message"
@@ -250,7 +250,7 @@ export default function Contact() {
                 rows={5}
                 maxLength={2000}
                 placeholder="A few lines about goals, audience and timeline…"
-                className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors resize-none text-base"
+                className="w-full bg-white border border-white/20 rounded-3xl py-3 px-4 text-slate-950 placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all resize-none text-base"
               />
             </label>
 
@@ -273,7 +273,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={submitting}
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:shadow-glow active:scale-95 transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {submitting ? "Sending…" : "Start a Project"}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

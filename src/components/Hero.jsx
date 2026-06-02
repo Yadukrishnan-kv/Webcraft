@@ -75,15 +75,15 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-foreground text-background font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-foreground text-background font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow active:scale-95 active:bg-primary/90"
             >
               Let's Get Started
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300" />
             </a>
 
             <a
               href="#work"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border hover:border-foreground transition-colors font-semibold"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border hover:border-foreground active:scale-95 transition-transform duration-300 font-semibold"
             >
              Explore Work
             </a>

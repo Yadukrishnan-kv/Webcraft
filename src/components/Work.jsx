@@ -141,6 +141,7 @@ export default function Work() {
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileTap={{ scale: 0.98 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: (index % 3) * 0.1 }}
               className="group relative aspect-[4/3] rounded-[32px] overflow-hidden block border border-border/40 bg-surface shadow-soft"
