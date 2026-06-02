@@ -56,9 +56,9 @@ function App() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Webbiko",
-          "description": "Webbiko is a web development studio building static, dynamic and custom websites that are fast, beautiful, responsive and SEO optimised.",
-          "url": "https://webbiko.in",
+          "name": "CodeCraft",
+          "description": "CodeCraft is a web development studio building static, dynamic and custom websites that are fast, beautiful, responsive and SEO optimised.",
+          "url": "https://CodeCraft.in",
           "telephone": "+91-85898-41074",
           "email": "muhammedshifinpkd@gmail.com",
           "areaServed": "Worldwide",
@@ -76,3 +76,5 @@ function App() {
 }
 
 export default App
+
+

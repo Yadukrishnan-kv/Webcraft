@@ -48,7 +48,7 @@ export default function WhyUs() {
           transition={{ duration: 0.7 }}
           className="max-w-3xl mb-16 text-left"
         >
-          <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Why Webbiko</span>
+          <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Why CodeCraft</span>
           <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-balance text-foreground">
            What sets {" "}
             <span className="gradient-text">us apart.</span>
@@ -87,3 +87,5 @@ export default function WhyUs() {
     </section>
   )
 }
+
+

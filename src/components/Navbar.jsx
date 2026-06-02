@@ -39,7 +39,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#top" className="flex items-center gap-2 group relative z-50">
           <span className="h-8 w-auto flex items-center font-display font-bold text-[28px] tracking-tight text-foreground transition-colors duration-300">
-            Webbiko<span className="text-primary group-hover:scale-125 transition-transform duration-300">.</span>
+            CodeCraft<span className="text-primary group-hover:scale-125 transition-transform duration-300">.</span>
           </span>
         </a>
 
@@ -118,3 +118,5 @@ export default function Navbar() {
     </motion.header>
   )
 }
+
+

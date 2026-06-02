@@ -7,7 +7,7 @@ const projects = [
     title: "Axiom Prime",
     tag: "Social welfare organization",
     year: "2025",
-    url: "https://webbiko.in/demo/axiom-prime.html",
+    url: "https://CodeCraft.in/demo/axiom-prime.html",
     bgClass: "from-emerald-950 via-teal-900 to-indigo-950",
     visual: (
       <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
@@ -28,7 +28,7 @@ const projects = [
     title: "Vitamin Cafe",
     tag: "Fresh Brews & Cozy Vibes",
     year: "2026",
-    url: "https://vitamincafe.webbiko.in",
+    url: "https://vitamincafe.CodeCraft.in",
     bgClass: "from-amber-950 via-orange-900 to-yellow-950",
     visual: (
       <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
@@ -45,7 +45,7 @@ const projects = [
     title: "Vanguard",
     tag: "Transportation & Logistics Services",
     year: "2025",
-    url: "https://webbiko.in/demo/Vanguard-logistics.html",
+    url: "https://CodeCraft.in/demo/Vanguard-logistics.html",
     bgClass: "from-blue-950 via-slate-900 to-sky-950",
     visual: (
       <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
@@ -63,7 +63,7 @@ const projects = [
     title: "Veridian",
     tag: "Medical Service Provider",
     year: "2025",
-    url: "https://webbiko.in/demo/veridian.html",
+    url: "https://CodeCraft.in/demo/veridian.html",
     bgClass: "from-teal-950 via-cyan-900 to-emerald-950",
     visual: (
       <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
@@ -78,7 +78,7 @@ const projects = [
     title: "Tesla Accessories",
     tag: "Smart Decarbonising for Engines",
     year: "2026",
-    url: "https://webbiko.in/clients/tesla",
+    url: "https://CodeCraft.in/clients/tesla",
     bgClass: "from-neutral-950 via-stone-900 to-red-950",
     visual: (
       <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
@@ -94,7 +94,7 @@ const projects = [
     title: "VertexCorp",
     tag: "Digital Solutions Organization",
     year: "2025",
-    url: "https://webbiko.in/demo/vertex.html",
+    url: "https://CodeCraft.in/demo/vertex.html",
     bgClass: "from-indigo-950 via-purple-900 to-pink-950",
     visual: (
       <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
@@ -183,3 +183,5 @@ export default function Work() {
     </section>
   )
 }
+
+

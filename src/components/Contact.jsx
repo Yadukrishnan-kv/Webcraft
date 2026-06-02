@@ -3,10 +3,11 @@ import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 import { z } from 'zod'
 
-// Zod validation schema matching Webbiko's exact spec
+// Zod validation schema matching CodeCraft's exact spec
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(100),
   email: z.string().trim().email("Please enter a valid email").max(255),
+  phone: z.string().trim().regex(/^[0-9+()\-\s]{7,20}$/, "Please enter a valid phone number"),
   type: z.string().trim().max(60).optional(),
   message: z.string().trim().min(10, "Message should be at least 10 characters").max(2000)
 })
@@ -15,6 +16,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     type: 'Static website',
     message: ''
   })
@@ -69,12 +71,13 @@ export default function Contact() {
         setFormData({
           name: '',
           email: '',
+          phone: '',
           type: 'Static website',
           message: ''
         })
       } else {
         const data = await response.json().catch(() => ({}))
-        const errorMsg = data?.errors?.[0]?.message || "Please try again or email muhammedshifinpkd@gmail.com directly."
+        const errorMsg = data?.errors?.[0]?.message || "Please try again or email yadhumanoj12@gmail.com directly."
         setStatus({
           type: 'error',
           message: errorMsg
@@ -83,7 +86,7 @@ export default function Contact() {
     } catch (error) {
       setStatus({
         type: 'error',
-        message: "Please check your network connection or email muhammedshifinpkd@gmail.com."
+        message: "Please check your network connection or email yadhumanoj12@gmail.com."
       })
     } finally {
       setSubmitting(false)
@@ -109,10 +112,10 @@ export default function Contact() {
             <div>
               <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Contact</span>
               <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-balance text-background">
-                Let's build something <span className="text-primary">remarkable.</span>
+                Ready to Transform  <span className="text-primary">Your Vision.</span>
               </h2>
               <p className="mt-6 text-background/70 text-lg leading-relaxed max-w-md">
-                Tell us about your project and we'll reply within 24 hours with next steps. No bots, no sales funnels — just a real conversation.
+               Let's discuss how we can bring your ideas to life. Book a quick call with our team, and we'll guide you through the next steps.
               </p>
             </div>
 
@@ -120,24 +123,24 @@ export default function Contact() {
             <div className="mt-12 space-y-6">
               
               {/* Phone item */}
-              <a href="tel:+918589841074" className="flex items-center gap-4 group">
+              <a href="tel:+919745706208" className="flex items-center gap-4 group">
                 <span className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center text-background group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                   <Phone className="w-5 h-5" />
                 </span>
                 <span>
                   <div className="text-[10px] text-background/50 uppercase tracking-widest font-semibold">Phone</div>
-                  <div className="font-display text-lg font-bold text-background">+91 85898 41074</div>
+                  <div className="font-display text-lg font-bold text-background">+91 97457 06208</div>
                 </span>
               </a>
 
               {/* Email item */}
-              <a href="mailto:muhammedshifinpkd@gmail.com" className="flex items-center gap-4 group">
+              <a href="mailto:yadhumanoj12@gmail.com" className="flex items-center gap-4 group">
                 <span className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center text-background group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                   <Mail className="w-5 h-5" />
                 </span>
                 <span className="break-all">
                   <div className="text-[10px] text-background/50 uppercase tracking-widest font-semibold">Email</div>
-                  <div className="font-display text-lg font-bold text-background">muhammedshifinpkd@gmail.com</div>
+                  <div className="font-display text-lg font-bold text-background">yadhumanoj12@gmail.com</div>
                 </span>
               </a>
 
@@ -175,7 +178,7 @@ export default function Contact() {
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Jane Doe"
+                  placeholder="Enter Your Name"
                   maxLength={100}
                   className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors text-base"
                 />
@@ -190,8 +193,23 @@ export default function Contact() {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="jane@brand.com"
+                  placeholder="Enter Your Email Address"
                   maxLength={255}
+                  className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors text-base"
+                />
+              </label>
+
+              {/* Phone field */}
+              <label className="block w-full">
+                <span className="text-sm text-background/70 mb-2 block font-medium">Phone Number</span>
+                <input
+                  required
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Enter Your Phone Number"
+                  maxLength={20}
                   className="w-full bg-transparent border-b border-background/20 py-3 text-background placeholder:text-background/30 focus:outline-none focus:border-primary transition-colors text-base"
                 />
               </label>
@@ -210,6 +228,7 @@ export default function Contact() {
                   <option className="bg-foreground text-background">Static website</option>
                   <option className="bg-foreground text-background">Dynamic web app</option>
                   <option className="bg-foreground text-background">E-commerce</option>
+                  <option className="bg-foreground text-background">Mobile app</option>
                   <option className="bg-foreground text-background">Custom build</option>
                   <option className="bg-foreground text-background">Redesign</option>
                   <option className="bg-foreground text-background">Not sure yet</option>
@@ -256,7 +275,7 @@ export default function Contact() {
               disabled={submitting}
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {submitting ? "Sending…" : "Send enquiry"}
+              {submitting ? "Sending…" : "Start a Project"}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </motion.form>
@@ -265,3 +284,5 @@ export default function Contact() {
     </section>
   )
 }
+
+

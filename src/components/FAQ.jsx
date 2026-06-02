@@ -4,29 +4,26 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    q: "How long does a typical website take?",
-    a: "Static marketing sites usually launch in 2–3 weeks. Dynamic platforms and custom builds typically run 4–10 weeks depending on scope. We'll give you an exact timeline after our discovery call."
+  q: "How long does a project usually take?",
+  a: "Static websites usually take 2–3 weeks. Web applications, mobile apps, and custom systems typically take 4–8 weeks depending on scope and complexity. After understanding your requirements, we provide a clear and accurate timeline."
+},
+  {
+    q: "Do you provide support after launch?",
+    a: "Yes. Every project includes 30 days of post-launch support. After that, optional maintenance plans are available for updates, fixes, hosting, and performance monitoring."
+  },
+  
+  {
+    q: "Can you work on existing websites?",
+    a: "Yes. We review your current setup, improve performance and design where needed, and upgrade the system without affecting existing content."
   },
   {
-    q: "Do you offer ongoing support after launch?",
-    a: "Yes — every project ships with a 30-day post-launch support window for free. After that you can choose a monthly care plan covering hosting, security updates, content edits and analytics reviews."
+    q: "What tools and technologies do you use?",
+    a: "We use modern web technologies like React, Next.js, Node, and Tailwind, along with scalable hosting and backend solutions depending on project needs. The stack is chosen based on performance and scalability, not trends."
   },
   {
-    q: "Will my site be SEO-friendly?",
-    a: "Absolutely. SEO is built into the foundation of every site: semantic HTML, fast Core Web Vitals, mobile-first responsive design, schema markup, automatic sitemaps, alt text and clean URLs."
-  },
-  {
-    q: "Can you redesign my existing website?",
-    a: "Of course. We'll audit your current site, identify what's working and what isn't, then redesign and re-engineer it without losing your existing SEO equity or content."
-  },
-  {
-    q: "What technologies do you use?",
-    a: "We choose the right tool for each job: React, Next.js, Vite, Tailwind, Node, Supabase, headless CMS platforms and edge hosting (Vercel, Cloudflare). We avoid bloated builders and lock-in."
-  },
-  {
-    q: "How much does a website cost?",
-    a: "Pricing depends on scope, but most projects fall between INR 3,499 and INR 5,00,000+. Send us a quick brief via our contact form and we'll reply with a detailed proposal."
-  }
+  q: "How much does a website cost?",
+  a: "Pricing depends on scope, features, and complexity. We build everything from websites to web applications, mobile apps, and custom systems, and provide a tailored quote after understanding your requirements."
+}
 ]
 
 export default function FAQ() {
@@ -50,7 +47,7 @@ export default function FAQ() {
         >
           <span className="text-sm uppercase tracking-[0.3em] text-primary font-bold">FAQ</span>
           <h2 className="mt-4 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground">
-            Questions, answered.
+         Everything You Need to Know
           </h2>
         </motion.div>
 

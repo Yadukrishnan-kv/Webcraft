@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles, ArrowRight } from "lucide-react";
 
@@ -35,7 +34,7 @@ export default function Hero() {
             className="inline-flex self-start items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/60 backdrop-blur text-xs sm:text-sm text-muted-foreground mb-8"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span>Designing and developing websites that drive growth</span>
+            <span>Building digital products that perform</span>
           </motion.div>
 
           {/* Heading */}
@@ -62,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-8 text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl text-balance leading-relaxed"
           >
-            Webbiko is a web development studio designing static, dynamic, and
+            CodeCraft is a web development studio designing static, dynamic, and
             fully custom websites built to engage visitors, generate leads, and
             grow your brand.{" "}
           </motion.p>
@@ -86,7 +85,7 @@ export default function Hero() {
               href="#work"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border hover:border-foreground transition-colors font-semibold"
             >
-              See our work
+             Explore Work
             </a>
           </motion.div>
 
@@ -119,7 +118,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="lg:col-span-5 relative w-full aspect-square max-w-[480px] lg:max-w-none mx-auto lg:ml-auto"
+          className="lg:col-span-5 relative w-full aspect-square max-w-[480px] lg:max-w-none mx-auto lg:ml-auto px-2 sm:px-0"
         >
           {/* Main Visual Display Card */}
           <div className="relative w-full h-full rounded-[32px] overflow-hidden shadow-elegant border border-border/40 bg-surface flex items-center justify-center">
@@ -130,41 +129,55 @@ export default function Hero() {
             <div className="relative w-72 h-72 rounded-full border border-primary/20 flex items-center justify-center animate-pulse">
               <div className="absolute w-56 h-56 rounded-full border border-dashed border-primary/30 rotate-45" />
               <div className="absolute w-40 h-40 rounded-full bg-gradient-to-br from-primary/20 to-purple-600/5 blur-xl" />
-              <div className="relative w-28 h-28 rounded-full border-2 border-primary bg-background flex flex-col items-center justify-center p-4 shadow-glow">
+              <div className="relative w-30 h-28 rounded-full border-2 border-primary bg-background flex flex-col items-center justify-center p-4 shadow-glow">
                 <span className="font-display font-black text-xl text-primary">
-                  Webbiko
+                  CodeCraft
                 </span>
-                <span className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">
-                  Studio
-                </span>
+               
               </div>
             </div>
 
             {/* Glowing Mesh Dots */}
-            <div className="absolute top-10 right-10 flex gap-2">
+            {/* <div className="absolute top-10 right-10 flex gap-2">
               <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-ping" />
               <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
-            </div>
+            </div> */}
 
             {/* Absolute Bottom Badge Label */}
-            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-muted-foreground/60">
-              <span>Web Studio</span>
-              <span>Est. 2024</span>
-            </div>
+            
           </div>
 
           {/* Floating Widget 1: Performance */}
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -left-6 top-12 bg-background/90 backdrop-blur border border-border rounded-2xl p-4 shadow-soft"
+            className="absolute left-2 top-6 sm:-left-6 sm:top-12 bg-background/90 backdrop-blur border border-border rounded-2xl p-3 sm:p-4 shadow-soft"
           >
-            <div className="text-[10px] text-muted-foreground uppercase tracking-widest">
-              Performance
+            <div className="text-[10px] text-muted-foreground uppercase tracking-widest whitespace-nowrap">
+             Static Websites
             </div>
-            <div className="font-display text-xl sm:text-2xl font-black mt-1 text-foreground">
-              100<span className="text-primary">/</span>100
+            
+          </motion.div>
+           <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute left-2 bottom-4 sm:-left-6 sm:bottom-12 bg-foreground text-background rounded-2xl p-3 sm:p-4 shadow-glow"
+          >
+            <div className="text-[10px] text-background/80 uppercase tracking-widest whitespace-nowrap">
+           Dynamic Web Apps
             </div>
+            
+          </motion.div>
+
+            <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute right-2 top-6 sm:-right-6 sm:top-12 bg-foreground text-background rounded-2xl p-3 sm:p-4 shadow-glow"
+          >
+            <div className="text-[10px] text-background/80 uppercase tracking-widest whitespace-nowrap">
+         Custom Solutions
+            </div>
+            
           </motion.div>
 
           {/* Floating Widget 2: SEO */}
@@ -176,17 +189,17 @@ export default function Hero() {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute -right-4 bottom-12 bg-foreground text-background rounded-2xl p-4 shadow-glow"
+            className="absolute right-2 bottom-4 sm:-right-4 sm:bottom-12 bg-background/90 backdrop-blur border border-border rounded-2xl p-3 sm:p-4 shadow-soft"
           >
-            <div className="text-[10px] opacity-70 uppercase tracking-widest">
-              SEO Score
+            <div className="text-[10px] text-muted-foreground uppercase tracking-widest whitespace-nowrap">
+           Mobile Applications
             </div>
-            <div className="font-display text-xl sm:text-2xl font-black mt-1">
-              A+
-            </div>
+          
           </motion.div>
         </motion.div>
       </div>
     </section>
   );
 }
+
+
