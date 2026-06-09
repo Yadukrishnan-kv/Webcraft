@@ -21,7 +21,7 @@ const projects = [
   },
   {
     title: "Happyland Group",
-    tag: "Fresh Brews & Cozy Vibes",
+    tag: "Leading Destination Management Services & Luxury Travel in the UAE",
     year: "2026",
     url: "https://happylandgroupventures.com/",
     bgClass: "from-emerald-950 via-teal-900 to-indigo-950",
