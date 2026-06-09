@@ -4,19 +4,19 @@ import { Star } from 'lucide-react'
 
 const testimonials = [
   {
-    quote: "Codiqo delivered a site that loads instantly and looks better than anything we'd seen on dribbble. They genuinely cared about the outcome.",
-    name: "Aanya Krishnan",
-    role: "Founder, Bloom Skincare"
+    quote: "Working with Codiqo was one of the best decisions for our business. The website is fast, professional, and has significantly improved our online presence",
+    name: "Vinayak T V ",
+    role: "Founder, Fitbite"
   },
   {
-    quote: "From the first meeting to launch took 3 weeks. Conversions on the new site are up 47%. They are now our long-term web partner.",
-    name: "Rahul Menon",
-    role: "CEO, Northwind Travel"
+    quote: "From design to deployment, everything was handled perfectly. The attention to detail and user experience exceeded our expectations.",
+    name: "Benet Binu",
+    role: "Product Lead, Travel Bay"
   },
   {
-    quote: "Custom dashboard, headless CMS, integrated payments — they handled it all and explained every decision. Rare to find this level of craft.",
-    name: "Sara Joseph",
-    role: "Product Lead, Mintly"
+    quote: "We wanted a premium website that reflected our brand, and CodeCraft delivered exactly that. The final result feels modern, clean, and trustworthy.",
+    name: "Muhammad Shahan K",
+    role: "Founder, Shanu Kitchen"
   }
 ]
 

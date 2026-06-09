@@ -1,44 +1,37 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
-
+import fitbiteImg from '../assets/fitbite.png'
+import happylandgroupventures from '../assets/Screenshot 2026-06-09 112813.png'
 const projects = [
   {
-    title: "Axiom Prime",
-    tag: "Social welfare organization",
-    year: "2025",
-    url: "https://codiqo.in/demo/axiom-prime.html",
+    title: "Fitbite",
+    tag: "Where Nutrition Meets Results",
+    year: "2026",
+    url: "https://fitbite-healthy-meals.vercel.app/",
     bgClass: "from-emerald-950 via-teal-900 to-indigo-950",
+    isFullImage: true,
     visual: (
-      <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
-        <rect x="5" y="5" width="90" height="90" rx="6" stroke="currentColor" strokeWidth="1.5" />
-        <line x1="5" y1="20" x2="95" y2="20" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="15" cy="12.5" r="2" fill="currentColor" />
-        <circle cx="21" cy="12.5" r="2" fill="currentColor" />
-        <circle cx="27" cy="12.5" r="2" fill="currentColor" />
-        <rect x="15" y="30" width="30" height="25" rx="3" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="55" y="30" width="30" height="6" rx="1.5" fill="currentColor" />
-        <rect x="55" y="42" width="30" height="4" rx="1" stroke="currentColor" strokeWidth="1" />
-        <rect x="55" y="50" width="20" height="4" rx="1" stroke="currentColor" strokeWidth="1" />
-        <rect x="15" y="65" width="70" height="20" rx="3" stroke="currentColor" strokeWidth="1" />
-      </svg>
+      <img
+        src={fitbiteImg}
+        alt="Fitbite"
+        className="w-full h-full object-contain transition-opacity duration-500"
+      />
     )
   },
   {
-    title: "Vitamin Cafe",
+    title: "Happyland Group",
     tag: "Fresh Brews & Cozy Vibes",
     year: "2026",
-    url: "https://vitamincafe.codiqo.in",
-    bgClass: "from-amber-950 via-orange-900 to-yellow-950",
+    url: "https://happylandgroupventures.com/",
+    bgClass: "from-emerald-950 via-teal-900 to-indigo-950",
+    isFullImage: true,
     visual: (
-      <svg className="w-4/5 h-4/5 opacity-30 group-hover:opacity-40 transition-opacity duration-300" viewBox="0 0 100 100" fill="none">
-        <rect x="5" y="5" width="90" height="90" rx="6" stroke="currentColor" strokeWidth="1.5" />
-        <line x1="5" y1="25" x2="95" y2="25" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="50" cy="55" r="20" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M42 55 C42 45, 58 45, 58 55" stroke="currentColor" strokeWidth="1.5" />
-        <line x1="50" y1="35" x2="50" y2="75" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
-        <line x1="30" y1="55" x2="70" y2="55" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
-      </svg>
+     <img
+        src={happylandgroupventures}
+        alt="Happyland Group Ventures"
+        className="w-full h-full object-contain transition-opacity duration-500"
+      />
     )
   },
   {
@@ -147,22 +140,26 @@ export default function Work() {
               className="group relative aspect-[4/3] rounded-[32px] overflow-hidden block border border-border/40 bg-surface shadow-soft"
             >
               {/* Representational Mock Visual Canvas */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.bgClass} flex items-center justify-center transition-all duration-700 group-hover:scale-105 text-foreground/80 group-hover:text-primary-glow`}>
+              <div className={`absolute inset-0 bg-gradient-to-br ${project.bgClass} flex items-center justify-center transition-all duration-700 text-foreground/80 group-hover:text-primary-glow ${project.isFullImage ? '' : 'group-hover:scale-105'}`}>
                 {project.visual}
               </div>
 
               {/* High Contrast Overlay */}
-              <div className="absolute inset-0 bg-foreground/45 group-hover:bg-foreground/25 transition-colors duration-500" />
+              {project.isFullImage ? (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent transition-opacity duration-500" />
+              ) : (
+                <div className="absolute inset-0 bg-foreground/45 group-hover:bg-foreground/25 transition-colors duration-500" />
+              )}
 
               {/* Card Hover Information content */}
-              <div className="absolute inset-0 p-8 lg:p-10 flex flex-col justify-between text-background z-10 select-none">
+              <div className={`absolute inset-0 p-8 lg:p-10 flex flex-col justify-between z-10 select-none ${project.isFullImage ? 'text-white' : 'text-background'}`}>
                 {/* Top Row: Year & Rotation Arrow */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-widest opacity-85 bg-foreground/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                  <span className={`text-xs font-bold uppercase tracking-widest opacity-85 px-3 py-1 rounded-full backdrop-blur-sm ${project.isFullImage ? 'bg-black/40 text-white' : 'bg-foreground/10'}`}>
                     {project.year}
                   </span>
                   
-                  <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground group-hover:rotate-45 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-soft">
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-soft group-hover:rotate-45 group-hover:bg-primary group-hover:text-primary-foreground ${project.isFullImage ? 'bg-white text-black' : 'bg-background text-foreground'}`}>
                     <ArrowUpRight className="w-5 h-5" />
                   </div>
                 </div>
@@ -172,7 +169,7 @@ export default function Work() {
                   <div className="text-xs sm:text-sm font-semibold opacity-90 mb-1 tracking-wide">
                     {project.tag}
                   </div>
-                  <h3 className="font-display text-2xl sm:text-3xl font-black tracking-tight leading-none text-background">
+                  <h3 className={`font-display text-2xl sm:text-3xl font-black tracking-tight leading-none ${project.isFullImage ? 'text-white' : 'text-background'}`}>
                     {project.title}
                   </h3>
                 </div>
