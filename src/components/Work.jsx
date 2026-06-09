@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
-import fitbiteImg from '../assets/fitbite.png'
+import fitbiteImg from '../assets/Fitbite.png'
 import happylandgroupventures from '../assets/Screenshot 2026-06-09 112813.png'
 const projects = [
   {
