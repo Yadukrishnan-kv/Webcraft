@@ -13,7 +13,7 @@ export default function Footer() {
               href="#top"
               className="flex items-center gap-2 font-display font-black text-2xl tracking-tight text-foreground select-none"
             >
-              CodeCraft<span className="text-primary font-bold">.</span>
+              Codiqo<span className="text-primary font-bold">.</span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               A web development studio creating fast, scalable digital products that perform in the real world.
@@ -70,11 +70,11 @@ export default function Footer() {
             <ul className="space-y-3.5 text-sm">
               <li>
                 <a
-                  href="tel:+919745707208"
+                  href="tel:+919745706208"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-foreground transition-colors duration-300"
                 >
                   <Phone className="w-4 h-4 text-primary" />
-                  <span>+91 9745707208</span>
+                  <span>+91 97457 06208</span>
                 </a>
               </li>
               <li>
@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Lower Footer: Legal Copyright */}
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-muted-foreground">
           <p className="cursor-default">
-            &copy; {new Date().getFullYear()} CodeCraft
+            &copy; {new Date().getFullYear()} Codiqo
             <span className="text-primary font-bold">.</span> All rights
             reserved.
           </p>

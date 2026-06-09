@@ -1,9 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
-import { z } from 'zod'
 
-// Zod validation schema matching CodeCraft's exact spec
+// Custom SVG WhatsApp icon for premium visual style
+const WhatsAppIcon = ({ className = "w-5 h-5" }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.17.7 4.19 1.89 5.83L2.06 22l4.31-1.13c1.55.85 3.33 1.13 5.63 1.13 5.52 0 10-4.48 10-10S17.52 2 12.004 2zm4.83 14.24c-.2.56-1.16 1.08-1.59 1.13-.41.05-.93.07-1.48-.1-2.19-.69-3.87-2.61-4.95-4.08-1.08-1.47-1.78-3.23-1.78-5.06 0-.91.48-1.41.81-1.74.26-.26.58-.33.84-.33.26 0 .53 0 .76.01.24.01.55-.09.85.64.31.75 1.06 2.58 1.15 2.76.09.18.15.39.03.62-.12.23-.27.4-.43.59-.16.19-.34.4-.48.54-.16.16-.33.34-.14.67.19.33.85 1.4 1.83 2.27.98.87 2.11 1.45 2.44 1.62.33.17.52.14.71-.08.19-.22.82-.96 1.04-1.29.22-.33.44-.28.74-.17.3.11 1.91.9 2.24 1.06.33.16.55.24.63.38.08.14.08.82-.12 1.38z"/>
+  </svg>
+)
+
+/*
+// CODE KEPT AS REQUESTED BUT COMMENTED OUT
+// Zod validation schema matching Codiqo's exact spec
+import { z } from 'zod'
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(100),
   email: z.string().trim().email("Please enter a valid email").max(255),
@@ -11,8 +25,11 @@ const contactSchema = z.object({
   type: z.string().trim().max(60).optional(),
   message: z.string().trim().min(10, "Message should be at least 10 characters").max(2000)
 })
+*/
 
 export default function Contact() {
+  /*
+  // CODE KEPT AS REQUESTED BUT COMMENTED OUT
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -92,6 +109,7 @@ export default function Contact() {
       setSubmitting(false)
     }
   }
+  */
 
   return (
     <section id="contact" className="py-24 lg:py-40 bg-foreground text-background relative overflow-hidden">
@@ -157,7 +175,51 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right Column: Direct Formspree Form */}
+          {/* Right Column: WhatsApp Redirect Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            whileHover={{ y: -6, borderColor: "rgba(16, 185, 129, 0.4)", boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 25px rgba(16, 185, 129, 0.1)" }}
+            className="lg:col-span-7 bg-gradient-to-br from-emerald-950/85 via-slate-950/95 to-emerald-950/40 border border-emerald-500/20 shadow-[0_15px_30px_-15px_rgba(0,0,0,0.8)] rounded-[32px] p-8 lg:p-12 flex flex-col justify-between min-h-[360px] relative overflow-hidden text-left transition-colors duration-300"
+          >
+            {/* Visual design glows */}
+            <div className="absolute -right-20 -top-20 w-72 h-72 bg-emerald-500/15 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -left-20 -bottom-20 w-72 h-72 bg-teal-500/10 rounded-full blur-[120px] pointer-events-none" />
+
+            {/* Subtle Grid Pattern Overlay */}
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]" />
+
+            <div className="space-y-6 relative z-10">
+              {/* Title & description */}
+              <div className="space-y-3">
+                <h3 className="font-display font-black text-2xl sm:text-3xl text-white">
+                  Chat With Us on <span className="text-emerald-400">WhatsApp</span>
+                </h3>
+                <p className="text-white/80 text-base sm:text-lg leading-relaxed">
+                  Tap the button below to start a conversation. We typically respond within minutes.
+                </p>
+              </div>
+            </div>
+
+            {/* Premium WhatsApp Button */}
+            <div className="pt-8 relative z-10">
+              <a
+                href="https://wa.me/919745706208?text=Hi%20Codiqo%21%20I%20would%20like%20to%20discuss%20a%20new%20website/web%20app%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4.5 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-base hover:from-emerald-400 hover:to-green-500 shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.6)] active:scale-95 transition-all duration-300 cursor-pointer"
+              >
+                <WhatsAppIcon className="w-5 h-5 fill-current" />
+                <span>Message on WhatsApp</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+            </div>
+          </motion.div>
+
+          {/*
+          // ORIGINAL FORM RETAINED IN COMMENTS AS REQUESTED
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 30 }}
@@ -166,10 +228,7 @@ export default function Contact() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="lg:col-span-7 bg-gradient-to-br from-slate-950/95 via-slate-900/90 to-slate-800/85 border border-primary/20 shadow-soft rounded-[32px] p-8 lg:p-12 space-y-6 text-left"
           >
-            {/* Input grid */}
             <div className="grid md:grid-cols-2 gap-6">
-              
-              {/* Name field */}
               <label className="block w-full">
                 <span className="text-sm text-white/70 mb-2 block font-medium">Your name</span>
                 <input
@@ -184,7 +243,6 @@ export default function Contact() {
                 />
               </label>
 
-              {/* Email field */}
               <label className="block w-full">
                 <span className="text-sm text-white/70 mb-2 block font-medium">Email</span>
                 <input
@@ -199,7 +257,6 @@ export default function Contact() {
                 />
               </label>
 
-              {/* Phone field */}
               <label className="block w-full">
                 <span className="text-sm text-white/70 mb-2 block font-medium">Phone Number</span>
                 <input
@@ -215,7 +272,6 @@ export default function Contact() {
               </label>
             </div>
 
-            {/* Select Dropdown field */}
             <label className="block w-full">
               <span className="text-sm text-white/70 mb-2 block font-medium">Project type</span>
               <div className="relative">
@@ -239,7 +295,6 @@ export default function Contact() {
               </div>
             </label>
 
-            {/* Textarea field */}
             <label className="block w-full">
               <span className="text-sm text-white/70 mb-2 block font-medium">Tell us about your project</span>
               <textarea
@@ -254,7 +309,6 @@ export default function Contact() {
               />
             </label>
 
-            {/* Alert Notifications */}
             {status.message && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -269,7 +323,6 @@ export default function Contact() {
               </motion.div>
             )}
 
-            {/* Submit CTA */}
             <button
               type="submit"
               disabled={submitting}
@@ -279,6 +332,7 @@ export default function Contact() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </motion.form>
+          */}
         </div>
       </div>
     </section>

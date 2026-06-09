@@ -4,7 +4,7 @@ import { Star } from 'lucide-react'
 
 const testimonials = [
   {
-    quote: "CodeCraft delivered a site that loads instantly and looks better than anything we'd seen on dribbble. They genuinely cared about the outcome.",
+    quote: "Codiqo delivered a site that loads instantly and looks better than anything we'd seen on dribbble. They genuinely cared about the outcome.",
     name: "Aanya Krishnan",
     role: "Founder, Bloom Skincare"
   },

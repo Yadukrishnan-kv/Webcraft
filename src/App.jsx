@@ -22,7 +22,7 @@ function App() {
       <Hero />
 
       {/* Infinite scrolling Trusted logo brand ticker */}
-      <LogoTicker />
+      {/* <LogoTicker /> */}
 
       {/* Core Studio Services */}
       <Services />
@@ -40,7 +40,7 @@ function App() {
       <Testimonials />
 
       {/* Personal Spotlight on the founder */}
-      <Founder />
+      {/* <Founder /> */}
 
       {/* Collapsible FAQ accordion items */}
       <FAQ />
@@ -56,9 +56,9 @@ function App() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "CodeCraft",
-          "description": "CodeCraft is a web development studio building static, dynamic and custom websites that are fast, beautiful, responsive and SEO optimised.",
-          "url": "https://CodeCraft.in",
+          "name": "Codiqo",
+          "description": "Codiqo is a web development studio building static, dynamic and custom websites that are fast, beautiful, responsive and SEO optimised.",
+          "url": "https://codiqo.in",
           "telephone": "+91-85898-41074",
           "email": "muhammedshifinpkd@gmail.com",
           "areaServed": "Worldwide",

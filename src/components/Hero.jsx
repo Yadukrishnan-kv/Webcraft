@@ -61,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-8 text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl text-balance leading-relaxed"
           >
-            CodeCraft is a web development studio designing static, dynamic, and
+            Codiqo is a web development studio designing static, dynamic, and
             fully custom websites built to engage visitors, generate leads, and
             grow your brand.{" "}
           </motion.p>
@@ -131,7 +131,7 @@ export default function Hero() {
               <div className="absolute w-40 h-40 rounded-full bg-gradient-to-br from-primary/20 to-purple-600/5 blur-xl" />
               <div className="relative w-30 h-28 rounded-full border-2 border-primary bg-background flex flex-col items-center justify-center p-4 shadow-glow">
                 <span className="font-display font-black text-xl text-primary">
-                  CodeCraft
+                  Codiqo
                 </span>
                
               </div>

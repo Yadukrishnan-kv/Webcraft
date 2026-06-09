@@ -29,7 +29,7 @@ export default function Founder() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/60 backdrop-blur text-xs sm:text-sm text-muted-foreground">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span>Behind CodeCraft</span>
+            <span>Behind Codiqo</span>
           </span>
         </motion.div>
 
@@ -99,7 +99,7 @@ export default function Founder() {
 
               {/* Corner Labels */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-background/60 pointer-events-none">
-                <span>CodeCraft</span>
+                <span>Codiqo</span>
                 <span>Est. 2024</span>
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function Founder() {
             >
               <p>
                 I’m Yadu Krishnan, a web developer and the mind behind{" "}
-                <span className="text-foreground font-semibold">CodeCraft</span>.I
+                <span className="text-foreground font-semibold">Codiqo</span>.I
                 build digital products focused on performance, usability, and
                 real-world impact.
               </p>
